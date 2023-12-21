@@ -23,4 +23,16 @@ public class Cliente_Controller {
     public void Listar_Clientes(){
         cliente.listarClientes();
     }
+    
+    public void Inserir_Saldo(){
+        cliente.inserirSaldo();
+    }
+    
+    public void Consultar_Cliente(){
+        cliente.consultarCliente();
+    }
+    
+    public void Excluir_Cliente(){
+        cliente.excluirCliente();
+    }
 }

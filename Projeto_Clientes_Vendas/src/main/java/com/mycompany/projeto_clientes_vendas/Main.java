@@ -25,9 +25,11 @@ public class Main {
             System.out.println("\nMenu Principal:");
             System.out.println("1. Cadastrar Cliente");
             System.out.println("2. Listar Clientes");
-            System.out.println("3. Registrar Venda");
-            System.out.println("4. Listar Venda");
-            System.out.println("5. Sair");
+            System.out.println("3. Buscar Cliente");
+            System.out.println("4. Inserir Saldo");
+            System.out.println("5. Registrar Venda");
+            System.out.println("6. Listar Venda");
+            System.out.println("7. Sair");
             System.out.print("Escolha uma opção: ");
             
             escolha = scanner.nextInt();
@@ -42,18 +44,32 @@ public class Main {
                 case 2:
                     System.out.println("Opção 2 selecionada: Listar Clientes");
                     cliente.Listar_Clientes();
+                    
                     break;
                 case 3:
+                    System.out.println("Opção 3 selecionada: Buscar Cliente");
+                    cliente.Consultar_Cliente();
+                    
+                    break;
+                case 4:
+                    System.out.println("Opção 3 selecionada: Inserir Saldo");
+                    cliente.Inserir_Saldo();
+                    
+                    break;
+                case 5:
                     System.out.println("Opção 3 selecionada: Registrar Venda");
                     retorno = venda.Cadastrar_Venda();
                     System.out.println(retorno);
+                    
                     break;
-                case 4:
+                case 6:
                     System.out.println("Opção 4 selecionada: Listar Venda");
                     venda.Listar_Venda();
+                    
                     break;
-                case 5:
+                case 7:
                     System.out.println("Saindo do programa. Até logo!");
+                    
                     break;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");

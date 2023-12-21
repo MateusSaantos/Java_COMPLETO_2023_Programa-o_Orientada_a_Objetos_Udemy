@@ -70,6 +70,22 @@ public class Cliente {
         return c;
     }
     
+    public void excluirCliente(){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Informe o codigo do cliente que deseja excluir: ");
+        int codigo = scanner.nextInt();
+        
+        for (Cliente cliente : listaClientes) {
+            if(cliente.codigo == codigo){
+                listaClientes.remove(cliente);
+
+                break;
+            }
+        }
+        System.out.println("Cliente não encontrado");
+    }
+    
     public void listarClientes() {
         System.out.println("Lista de Clientes:");
         for (Cliente cliente : listaClientes) {
@@ -79,4 +95,45 @@ public class Cliente {
             System.out.println("--------------");
         }
     }
+    
+    public void inserirSaldo(){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Informe o codigo do cliente que deseja inserir o saldo: ");
+        int codigo = scanner.nextInt();
+        
+        for (Cliente cliente : listaClientes) {
+            if(cliente.codigo == codigo){
+                System.out.println("Informe o codigo do cliente que deseja inserir o saldo: ");
+                double adicionarSaldo = scanner.nextDouble();
+        
+                cliente.saldo = cliente.saldo + adicionarSaldo;
+                break;
+            }
+        }
+        System.out.println("Cliente não encontrado");
+    }
+    
+    public void consultarCliente(){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Informe o codigo do cliente que deseja consultar: ");
+        int codigo = scanner.nextInt();
+        
+        for (Cliente cliente : listaClientes) {
+            if(cliente.codigo == codigo){
+                System.out.println("Código: " + cliente.getCodigo());
+                System.out.println("Nome: " + cliente.getNome());
+                System.out.println("Saldo: " + cliente.getSaldo());
+                System.out.println("--------------");
+            
+                break;
+            }
+        }
+        System.out.println("Cliente não encontrado");
+    }
 }
+
+    
+
+    
